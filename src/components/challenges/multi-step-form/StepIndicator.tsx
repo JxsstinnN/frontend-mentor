@@ -26,8 +26,8 @@ function StepIndicator() {
           1
         </motion.span>
         <div>
-          <p>Step 1</p>
-          <h2>Your info</h2>
+          <p>Paso 1</p>
+          <h2>Datos de la solicitud</h2>
         </div>
       </li>
       <li className={`step-indicator`}>
@@ -38,8 +38,8 @@ function StepIndicator() {
           2
         </motion.span>
         <div>
-          <p>Step 2</p>
-          <h2>Select plan</h2>
+          <p>Paso 2</p>
+          <h2>Categoría de Cambio</h2>
         </div>
       </li>
       <li className={`step-indicator`}>
@@ -50,8 +50,8 @@ function StepIndicator() {
           3
         </motion.span>
         <div>
-          <p>Step 3</p>
-          <h2>Add-ons</h2>
+          <p>Paso 3</p>
+          <h2>Causa o origen de cambio</h2>
         </div>
       </li>
       <li className={`step-indicator`}>

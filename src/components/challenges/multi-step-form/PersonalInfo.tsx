@@ -1,5 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { user } from "./StepProvider";
+import { todaysDate } from "../../../helpers/time";
+import { fetchCompanies } from "../../../lib/data";
 
 function PersonalInfo() {
   const $user = useStore(user);
@@ -8,21 +10,23 @@ function PersonalInfo() {
     user.setKey(e.target.name, e.target.value);
   }
 
+  const companies = fetchCompanies();
+
   return (
     <form>
       <label>
         <div>
-          <span>Name</span>
+          <span>Fecha</span>
           {$user.name === "" && (
             <span className="error">This field is required</span>
           )}
         </div>
         <input
-          name="name"
-          type="text"
-          value={$user.name ?? ""}
+          name="fecha"
+          type="date"
+          value={todaysDate() ?? ""}
           onChange={handleChange}
-          placeholder="e.g. Stephen King"
+          placeholder=""
           required
           className={$user.name === "" ? "error" : ""}
         />
@@ -30,7 +34,7 @@ function PersonalInfo() {
 
       <label>
         <div>
-          <span>Email Address</span>
+          <span>Empresa</span>
           {$user.email === "" && (
             <span className="error">This field is required</span>
           )}
